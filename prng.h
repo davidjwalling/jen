@@ -1,0 +1,24 @@
+#pragma once
+
+#include "api.h"
+#include "des.h"
+#include "random.h"
+
+namespace prng {
+    enum {
+        recsize = cipher::recsize
+    };
+}
+
+class PRNG {
+public:
+    uint8_t _v[prng::recsize];
+    Random _random;
+    DES3 _des3;
+
+    PRNG();
+    ~PRNG();
+    void Init();
+    void Reset();
+    void GetRandomBytes(uint8_t* out, size_t len);
+};

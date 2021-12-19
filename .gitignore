@@ -1,0 +1,13 @@
+*.o
+*.exe
+*.vcxproj.user
+.vs/*
+.vscode/*
+test.*
+docs/*
+images/*
+tutorial/*
+Win32/*
+x64/*
+jen
+jentest

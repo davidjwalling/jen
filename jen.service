@@ -1,0 +1,16 @@
+# Jen Protocol Server
+# The service will fork() when the "service" program argument is provided.
+# Set the service type below to "forking".
+# The service handles SIG_TERM (15) to exit mainline.
+
+[Unit]
+Description=Jen Protocol Server
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/jen service
+ExecStop=/bin/kill -2 $MAINPID
+WorkingDirectory=/var/opt/jen
+
+[Install]
+WantedBy=multi-user.target
