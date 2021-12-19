@@ -120,7 +120,7 @@ x509.o: x509.cpp
 aes.cpp: aes.h asn.h oid.h
 	touch aes.cpp
 
-api.cpp: api.h ascii.h
+api.cpp: api.h
 	touch api.cpp
 
 app.cpp: api.h app.h file.h log.h passphrase.h socket.h uri.h
@@ -129,13 +129,13 @@ app.cpp: api.h app.h file.h log.h passphrase.h socket.h uri.h
 asn.cpp: asn.h
 	touch asn.cpp
 
-base64.cpp: base64.h ascii.h
+base64.cpp: base64.h
 	touch base64.cpp
 
 buffer.cpp: buffer.h
 	touch buffer.cpp
 
-channel.cpp: channel.h ascii.h log.h
+channel.cpp: channel.h log.h
 	touch channel.cpp
 
 cipher.cpp: cipher.h random.h
@@ -156,7 +156,7 @@ des.cpp: des.h asn.h oid.h
 digest.cpp: digest.h
 	touch digest.cpp
 
-file.cpp: file.h ascii.h log.h
+file.cpp: file.h log.h
 	touch file.cpp
 
 hmac.cpp: hmac.h md5.h sha.h
@@ -189,7 +189,7 @@ prng.cpp: prng.h
 random.cpp: random.h
 	touch random.cpp
 
-rsa.cpp: rsa.h ascii.h asn.h base64.h oid.h pbc2.h
+rsa.cpp: rsa.h asn.h base64.h oid.h pbc2.h
 	touch rsa.cpp
 
 sha.cpp: sha.h asn.h oid.h
@@ -198,10 +198,10 @@ sha.cpp: sha.h asn.h oid.h
 socket.cpp: socket.h log.h
 	touch socket.cpp
 
-uri.cpp: uri.h ascii.h
+uri.cpp: uri.h
 	touch uri.cpp
 
-x509.cpp: x509.h ascii.h asn.h base64.h oid.h sha.h
+x509.cpp: x509.h asn.h base64.h oid.h sha.h
 	touch x509.cpp
 
 aes.h: api.h cipher.h

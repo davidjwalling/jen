@@ -36,12 +36,13 @@ enum {
 #else
 #if defined(__linux__) || defined (__APPLE__)
 #define closesocket(x) ::close(x)
+#else
+#define SOMAXCONN 5
 #endif
 #define __cdecl
 #define _stat64 stat
 #define INVALID_SOCKET (-1)
 #define SOCKET_ERROR (-1)
-#define SOMAXCONN 5
 #define WSAENOBUFS ENOBUFS
 #define WSAENOTCONN ENOTCONN
 #define WSAEWOULDBLOCK EWOULDBLOCK
