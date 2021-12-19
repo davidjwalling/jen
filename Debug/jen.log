@@ -1,1 +1,0 @@
-﻿C:\repos\jen\jen.vcxproj(51,5): error MSB4019: The imported project "C:\repos\jen\ayriel.props" was not found. Confirm that the expression in the Import declaration "ayriel.props" is correct, and that the file exists on disk.
