@@ -7,38 +7,36 @@ Navigate a browser to <a href="https://www.st.com/en/development-tools/stm32cube
 <hr><table><tr><td><img src="../images/STM32CubeIDE-1.8.0-Win10-Install-001.png"></td></tr></table><hr>
 
 ## Install STM32CubeIDE
-The downloaded installer here is a compressed archive (.zip). Unzip and run the installer .exe.
+The downloaded installer here is a compressed archive (.zip). Unzip and run the installer .exe. On the Welcome page, click "Next".
 
 <hr><table><tr><td><img src="../images/STM32CubeIDE-1.8.0-Win10-Install-002.png"></td></tr></table><hr>
 
-Click "Next".
+On the License Agreement page, scroll down to read the license agreement and then click "I Agree".
 
-<hr><table><tr><td><img src="../images/stm32cubeide-1.8.0-win10-003.png"></td></tr></table><hr>
+<hr><table><tr><td><img src="../images/STM32CubeIDE-1.8.0-Win10-Install-003.png"></td></tr></table><hr>
 
-Click "I Agree".
+On the Choose Installation Location page, either accept the default installation location or click "Browse..." to locate and select an alternate installation folder. Then click "Next".
 
-<hr><table><tr><td><img src="../images/stm32cubeide-1.8.0-win10-004.png"></td></tr></table><hr>
+<hr><table><tr><td><img src="../images/STM32CubeIDE-1.8.0-Win10-Install-004.png"></td></tr></table><hr>
 
-Accept the default Destination Folder or select an alternate location. Click "Next".
+On the Choose Components page, we uncheck "SEGGER J-link drivers" and check "ST-LINK drivers". This is because the board we're using is a Nucleo F767 with an onboard ST-LINK. Then click "Install".
 
-<hr><table><tr><td><img src="../images/stm32cubeide-1.8.0-win10-005.png"></td></tr></table><hr>
+<hr><table><tr><td><img src="../images/STM32CubeIDE-1.8.0-Win10-Install-005.png"></td></tr></table><hr>
 
-Here, we'll be using an STM Nucleo board. Uncheck "SEGGER J-Link drivers". Make sure "ST-LINK drivers" is checked. Click "Install".
+When the installation completes, on the Installation Complete page, click "Next".
 
-<hr><table><tr><td><img src="../images/stm32cubeide-1.8.0-win10-006.png"></td></tr></table><hr>
+<hr><table><tr><td><img src="../images/STM32CubeIDE-1.8.0-Win10-Install-006.png"></td></tr></table><hr>
 
-When the installation files have been copied, click "Next".
+To complete the installation wizard, we'll leave checked the "Create desktop shortcut" checkbox and click "Finish".
 
-<hr><table><tr><td><img src="../images/stm32cubeide-1.8.0-win10-007.png"></td></tr></table><hr>
-
-Complete the installation by clicking "Finish".
+<hr><table><tr><td><img src="../images/STM32CubeIDE-1.8.0-Win10-Install-007.png"></td></tr></table><hr>
 
 ## Setup STM32CubeIDE
 
 Launch STM32CubeIDE. When prompted, choose a folder as the default workspace directory. Here, we use an alternate folder. If you want to use this folder as the default and not be asked again on startup, check the "Use this as the default and do not ask again" checkbox. Then click Launch.
 
-<hr><table><tr><td><img src="../images/stm32cubeide-1.8.0-win10-008.png"></td></tr></table><hr>
+<hr><table><tr><td><img src="../images/STM32CubeIDE-1.8.0-Win10-Install-008.png"></td></tr></table><hr>
 
-STM32CubeIDE is now installed. STM32CubeIDE is based on Eclipse. In the next part, we will create the base project for Ayriel.
+STM32CubeIDE is now installed. STM32CubeIDE is based on Eclipse. In the next part, we will create our program project.
 
-<hr><table><tr><td><img src="../images/stm32cubeide-1.8.0-win10-009.png"></td></tr></table><hr>
+<hr><table><tr><td><img src="../images/STM32CubeIDE-1.8.0-Win10-Install-009.png"></td></tr></table><hr>
