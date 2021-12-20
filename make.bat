@@ -2,6 +2,7 @@
 if "%1" == "clean" (
 	if exist Win32 rmdir /s/q Win32
 	if exist x64 rmdir /s/q x64
+        del /f test.*
 	exit /b
 )
 Setlocal

@@ -11,7 +11,7 @@ APPLNK	= ${CC}
 all: jen jentest
 
 clean:
-	rm -f jen jentest *.o
+	rm -f jen jentest *.o test.*
 
 install:
 	cp jen /usr/local/bin
