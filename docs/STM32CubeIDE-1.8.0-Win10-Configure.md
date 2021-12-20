@@ -127,4 +127,4 @@ If prompted to open the "Debug" perspective, click "Switch".
 
 <hr><table><tr><td><img src="../images/STM32CubeIDE-1.8.0-Win10-Configure-029.png"></td></tr></table><hr>
 
-30. Use the "Project" | "Close Project" menu item to close the project. Archive your project folder to save your work. We are now ready to replace our sample code with logic to perform TCP and UDP network I/O in the next part.
+30. Use the "Project" | "Close Project" menu item to close the project. Archive your project folder to save your work. We are now ready to replace our sample code with logic to perform network I/O in the next part.
