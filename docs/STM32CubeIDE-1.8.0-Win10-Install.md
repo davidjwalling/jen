@@ -4,12 +4,12 @@ If you already have STM32CubeIDE installed and want to reinstall, uninstall STM3
 ## Download STM32CubeIDE Installer
 Navigate a browser to <a href="https://www.st.com/en/development-tools/stm32cubeide.html">https://www.st.com/en/development-tools/stm32cubeide.html</a>. Scroll down to the "Get Software" section. Click on "Get latest" for the appropriate platform. Here, we're installing on Windows, so we'll download the STM32CubeIDE Windows Installer. If prompted, accept the license agreement and login to your ST Microelectronics account. Having an account is required, but free.
 
-<hr><table><tr><td><img src="../images/stm32cubeide-1.8.0-win10-001.png"></td></tr></table><hr>
+<hr><table><tr><td><img src="../images/STM32CubeIDE-1.8.0-Win10-Install-001.png"></td></tr></table><hr>
 
 ## Install STM32CubeIDE
 The downloaded installer here is a compressed archive (.zip). Unzip and run the installer .exe.
 
-<hr><table><tr><td><img src="../images/stm32cubeide-1.8.0-win10-002.png"></td></tr></table><hr>
+<hr><table><tr><td><img src="../images/STM32CubeIDE-1.8.0-Win10-Install-002.png"></td></tr></table><hr>
 
 Click "Next".
 
