@@ -173,9 +173,6 @@
     <ClCompile Include="socket.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="uri.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="x509.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

@@ -13,9 +13,9 @@ PRNG::~PRNG()
 void PRNG::Init()
 {
     uint8_t k[des3::keysize] = { 0 };
-    for (int i = 0; i < sizeof(k); k[i] = (uint8_t)_random.Rand(), i++);
+    for (unsigned int i = 0; i < sizeof(k); k[i] = (uint8_t)_random.Rand(), i++);
     _des3.SetKey(k);
-    for (int i = 0; i < sizeof(_v); _v[i] = (uint8_t)_random.Rand(), i++);
+    for (unsigned int i = 0; i < sizeof(_v); _v[i] = (uint8_t)_random.Rand(), i++);
 }
 
 void PRNG::Reset()

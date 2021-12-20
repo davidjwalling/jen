@@ -156,7 +156,6 @@
     <ClCompile Include="rsa.cpp" />
     <ClCompile Include="sha.cpp" />
     <ClCompile Include="socket.cpp" />
-    <ClCompile Include="uri.cpp" />
     <ClCompile Include="x509.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

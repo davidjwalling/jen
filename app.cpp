@@ -1,8 +1,6 @@
 #include "app.h"
 #include "log.h"
 
-#include <iostream>
-
 namespace cond {
     namespace app {
         enum {
@@ -98,6 +96,16 @@ namespace app {
 }
 
 App theApp;
+
+extern "C" {
+int appStart() {
+    return theApp.Initialize(0, nullptr);
+}
+void appRun() {
+    theApp.GetClient();
+    theApp.ServiceChannel();
+}
+}
 
 App::App()
 {
@@ -500,6 +508,7 @@ bool App::Start(int argc, char* argv[])
     }
     SetConsoleCtrlHandler(ServiceHandleTerm, TRUE);
 #else
+#if defined(__linux) || defined(__APPLE)
     int rc = 0;
     int nullFile = 0;
     sigset_t set = { 0 };
@@ -627,6 +636,7 @@ bool App::Start(int argc, char* argv[])
         return false;
     }
 #endif
+#endif
     return true;
 }
 
@@ -645,6 +655,7 @@ void App::GetArgVars(int argc, char* argv[])
 
 void App::GenerateKey()
 {
+    /*
     _x509._prvKey.Create(1024);
     _x509._pubKey = _x509._prvKey;
     _x509.PutIssuer("E=jen@proserio.com;O=Proserio;CN=Jen");
@@ -662,6 +673,7 @@ void App::GenerateKey()
     _x509.SetCertLen(len);
     memset(cert, 0, 4096);
     delete[] cert;
+    */
 }
 
 void App::Configure(int argc, char* argv[])
@@ -787,7 +799,9 @@ int App::Exec(int argc, char* argv[])
     return appErr();
 }
 
+#if defined(_WIN32) || defined(__linux__) || defined(__APPLE__)
 int __cdecl main(int argc, char* argv[])
 {
     return theApp.Exec(argc, argv);
 }
+#endif

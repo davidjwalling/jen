@@ -6,7 +6,7 @@ class Buffer {
 public:
     size_t _len;
     size_t _head;
-    uint8_t _buf[2048];
+    uint8_t _buf[512];
 
     Buffer();
     ~Buffer();

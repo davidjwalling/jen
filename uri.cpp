@@ -111,12 +111,14 @@ bool URI::Put(char *uri_s)
             _host = dupstr(h);
             if (uri::protocol::file != _protocol) {
                 _addr = inet_addr(_host);
+                /*
                 if ((INADDR_NONE == _addr) || (!_addr)) {
                     struct hostent *host = gethostbyname(_host);
                     if (!host)
                         return false;
                     _addr = *(unsigned int *)host->h_addr_list[0];
                 }
+                */
                 _addr = htonl(_addr);
             }
         }

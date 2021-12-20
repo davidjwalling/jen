@@ -2346,9 +2346,9 @@ void testX509()
     key_enc = nullptr;
     key_chk = nullptr;
 
-    _X.PutIssuer("E=netcybr@proserio.com;O=Proserio;CN=NetCybrCA");
+    _X.PutIssuer("E=jen@proserio.com;O=Proserio;CN=Jen");
     _X.PutSerNo((uint8_t*)"1001");
-    _X.PutSubject("E=netcybr@proserio.com;O=Proserio;CN=NetCybrCA");
+    _X.PutSubject("E=jen@proserio.com;O=Proserio;CN=Jen");
     _X.PutNotBefore((uint8_t*)"20200101000000");
     _X.PutNotAfter((uint8_t*)"20300101000000");
     _X.PutPubKey(_rsa_chk);

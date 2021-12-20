@@ -7,7 +7,7 @@
 
 namespace app {
     enum {
-        channels = 16
+        channels = 4
     };
 }
 
@@ -31,7 +31,7 @@ public:
 
     Channel _channel[app::channels];
     Random _random;
-    X509 _x509;
+    //X509 _x509;
 
     App();
     ~App();

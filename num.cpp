@@ -307,15 +307,15 @@ void Num::putTwo()
 
 void Num::putRandom(Random& rand, size_t bits)
 {
-    uint32_t mod, random, * p, * q, * r;
+    uint32_t mod, random, * q, * r;
     putZero();
     if (bits) {
         _hiword = (bits - 1) >> num::bit2word;
-        mod = bits & num::wordbits - 1;
+        mod = bits & (num::wordbits - 1);
         random = rand.Rand();
         if (mod)
             random &= ~((uint32_t)-1 << mod);
-        p = q = &_word[0];
+        q = &_word[0];
         r = &_word[_hiword];
         while (q < r) *q++ = rand.Rand();
         if (random)
