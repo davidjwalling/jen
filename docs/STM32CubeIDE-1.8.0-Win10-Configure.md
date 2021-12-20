@@ -115,16 +115,16 @@ If prompted to open the "Debug" perspective, click "Switch".
 
 <hr><table><tr><td><img src="../images/STM32CubeIDE-1.8.0-Win10-Configure-026.png"></td></tr></table><hr>
 
-30. Confirm the program is at a breakpoint at the first instruction within the main routine.
+27. Confirm the program is at a breakpoint at the first instruction within the main routine.
 
 <hr><table><tr><td><img src="../images/STM32CubeIDE-1.8.0-Win10-Configure-027.png"></td></tr></table><hr>
 
-31. Place a breakpoint in StartDefaultTask. Step over instructions in main using the F6 key until osKernelStart is called, which should not return. Reach the breakpoint in StartDefaultTask. Step over instructions in StartDefaultTask and observe the HAL_GPIO_TogglePin calls enable/disable the green LED.
+28. Place a breakpoint in StartDefaultTask. Step over instructions in main using the F6 key until osKernelStart is called, which should not return. Reach the breakpoint in StartDefaultTask. Step over instructions in StartDefaultTask and observe the HAL_GPIO_TogglePin calls enable/disable the green LED.
 
 <hr><table><tr><td><img src="../images/STM32CubeIDE-1.8.0-Win10-Configure-028.png"></td></tr></table><hr>
 
-32. Press F8 to allow the program to continue running within the debugger. When you are ready, use Ctrl+F2 to terminate the debugger. Before closing the project, use the "Window" | "Perspective" | "Open Perspective" | "Debug" menu option to open the "Debug" explorer. Be sure to "Remove All Terminated Launches" before debugging again.
+29. Press F8 to allow the program to continue running within the debugger. When you are ready, use Ctrl+F2 to terminate the debugger. Before closing the project, use the "Window" | "Perspective" | "Open Perspective" | "Debug" menu option to open the "Debug" explorer. Be sure to "Remove All Terminated Launches" before debugging again.
 
 <hr><table><tr><td><img src="../images/STM32CubeIDE-1.8.0-Win10-Configure-029.png"></td></tr></table><hr>
 
-33. Use the "Project" | "Close Project" menu item to close the project. Archive your project folder to save your work. We are now ready to replace our sample code with logic to perform TCP and UDP network I/O in the next part.
+30. Use the "Project" | "Close Project" menu item to close the project. Archive your project folder to save your work. We are now ready to replace our sample code with logic to perform TCP and UDP network I/O in the next part.
