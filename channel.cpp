@@ -1016,7 +1016,7 @@ void Channel::HaveHTTPBody()
         DayName[m.tm_wday], m.tm_mday, MonthName[m.tm_mon], m.tm_year + 1900,
         m.tm_hour, m.tm_min, m.tm_sec);
     char ip[16] = { 0 };
-    sprintf(ip, "%lu.%lu.%lu.%lu",
+    sprintf(ip, "%u.%u.%u.%u",
         (_remoteAddr >> 24) & 255, (_remoteAddr >> 16) & 255,
         (_remoteAddr >> 8) & 255, _remoteAddr & 255);
     char body[768] = { 0 };
