@@ -655,7 +655,6 @@ void App::GetArgVars(int argc, char* argv[])
 
 void App::GenerateKey()
 {
-    /*
     _x509._prvKey.Create(1024);
     _x509._pubKey = _x509._prvKey;
     _x509.PutIssuer("E=jen@proserio.com;O=Proserio;CN=Jen");
@@ -673,7 +672,6 @@ void App::GenerateKey()
     _x509.SetCertLen(len);
     memset(cert, 0, 4096);
     delete[] cert;
-    */
 }
 
 void App::Configure(int argc, char* argv[])

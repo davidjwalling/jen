@@ -28,5 +28,5 @@ public:
     virtual void Decrypt(uint8_t* cipher, uint8_t* plain) = 0;
     virtual uint8_t* PutOID(uint8_t* buf) = 0;
 
-    virtual void SetIV(uint8_t* iv);
+    EXPORT virtual void SetIV(uint8_t* iv);
 };

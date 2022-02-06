@@ -606,12 +606,12 @@ extern "C" {
 #define COMPRESS_ERR_DEFLATE    4608 // QAPI_ERR_COMPRESS        //  0x1200 4608
 #define COMPRESS_ERR_INFLATE    4609 // QAPI_ERR_COMPRESS + 1    //  0x1201 4609
 
-int DeflateInit(z_streamp);
-int DeflateNext(z_streamp);
-int DeflateFinal(z_streamp);
-int DeflateEnd(z_streamp);
+EXPORT int DeflateInit(z_streamp);
+EXPORT int DeflateNext(z_streamp);
+EXPORT int DeflateFinal(z_streamp);
+EXPORT int DeflateEnd(z_streamp);
 
-int InflateInit(z_streamp);
-int InflateNext(z_streamp);
-int InflateFinal(z_streamp);
-int InflateEnd(z_streamp);
+EXPORT int InflateInit(z_streamp);
+EXPORT int InflateNext(z_streamp);
+EXPORT int InflateFinal(z_streamp);
+EXPORT int InflateEnd(z_streamp);

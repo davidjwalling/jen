@@ -21,9 +21,11 @@ $ sudo yum update
 $ sudo yum upgrade
 $ sudo yum groupinstall "Development Tools"
 ```
+###### Windows 10
+Install Visual Studio 2019 Community Edition
 ##### Build
 ###### Linux
-By default, "make install" copies to /usr/local/bin.
+By default, "make install" copies to /usr/local/lib and /usr/local/bin.
 Edit the Makefile if your local paths differ.
 Note, however, that when run as a daemon, Jen loads from /usr/bin.
 This allows local testing from /usr/local/bin.
@@ -72,6 +74,7 @@ Result Code 0
 ###### Linux (systemd)
 ```
 $ sudo mkdir /var/opt/jen
+$ sudo cp libjen.so /usr/lib
 $ sudo cp jen /usr/bin
 $ sudo cp jen.service /lib/systemd/system/
 $ sudo cp jen.conf /etc/modules-load.d/
@@ -109,6 +112,7 @@ $ sudo rm /etc/modules-load.d/jen.conf
 $ sudo rm /lib/systemd/system/jen.service
 $ sudo systemctl daemon-reload
 $ sudo rm /usr/bin/jen
+$ sudo rm /usr/lib/libjen.so
 $ sudo rm -rf /var/opt/jen
 ```
 ###### Windows 10 (as Administrator)

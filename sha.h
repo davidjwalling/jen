@@ -107,8 +107,8 @@ public:
     virtual void End() override;
     virtual uint8_t* PutOID(uint8_t* buf) override;
     virtual uint8_t* PutDigestInfo(uint8_t* buf) override;
-    SHA1();
-    ~SHA1() override;
+    EXPORT SHA1();
+    EXPORT ~SHA1() override;
 };
 
 class SHA256 : public SHA1 {
@@ -117,8 +117,8 @@ public:
     void Transform() override;
     virtual uint8_t* PutOID(uint8_t* buf) override;
     virtual uint8_t* PutDigestInfo(uint8_t* buf) override;
-    SHA256();
-    ~SHA256() override;
+    EXPORT SHA256();
+    EXPORT ~SHA256() override;
 };
 
 class SHA224 : public SHA256 {
@@ -126,8 +126,8 @@ public:
     void Begin() override;
     uint8_t* PutOID(uint8_t* buf) override;
     uint8_t* PutDigestInfo(uint8_t* buf) override;
-    SHA224();
-    ~SHA224() override;
+    EXPORT SHA224();
+    EXPORT ~SHA224() override;
 };
 
 class SHA512 : public Digest {
@@ -139,8 +139,8 @@ public:
     void End() override;
     virtual uint8_t* PutOID(uint8_t* buf) override;
     virtual uint8_t* PutDigestInfo(uint8_t* buf) override;
-    SHA512();
-    ~SHA512() override;
+    EXPORT SHA512();
+    EXPORT ~SHA512() override;
 };
 
 class SHA384 : public SHA512 {
@@ -148,6 +148,6 @@ public:
     void Begin() override;
     uint8_t* PutOID(uint8_t* buf) override;
     uint8_t* PutDigestInfo(uint8_t* buf) override;
-    SHA384();
-    ~SHA384() override;
+    EXPORT SHA384();
+    EXPORT ~SHA384() override;
 };

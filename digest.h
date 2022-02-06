@@ -53,6 +53,6 @@ public:
     virtual uint8_t* PutOID(uint8_t* buf) = 0;
     virtual uint8_t* PutDigestInfo(uint8_t* buf) = 0;
 
-    void Update(uint8_t* in, size_t len);
-    uint8_t* GetDigest(uint8_t* buf);
+    EXPORT void Update(uint8_t* in, size_t len);
+    EXPORT uint8_t* GetDigest(uint8_t* buf);
 };

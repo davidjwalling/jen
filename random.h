@@ -17,10 +17,10 @@ class Random {
 public:
     void Reset();
 
-    Random();
-    ~Random();
-    uint32_t Rand();
+    EXPORT Random();
+    EXPORT ~Random();
+    EXPORT uint32_t Rand();
     uint32_t RandInRange(uint32_t lo, uint32_t hi);
-    void Fill(uint8_t* out, size_t bytes);
+    EXPORT void Fill(uint8_t* out, size_t bytes);
 };
 

@@ -37,26 +37,26 @@ public:
     RSA _prvKey;
     RSA _pubKey;
 
-    X509();
-    ~X509();
+    EXPORT X509();
+    EXPORT ~X509();
     void Init();
     void Reset();
     bool PutDateTime(char* out, size_t* len, uint8_t* val);
     uint8_t* PutNamePart(uint8_t* buf, char* attr, char* val);
-    void PutIssuer(const char* val);
-    void PutSerNo(uint8_t* val);
-    void PutSubject(const char* val);
-    void PutNotBefore(uint8_t* val);
-    void PutNotAfter(uint8_t* val);
-    void PutPubKey(RSA& pubkey);
-    void PutPrvKey(RSA& prvkey);
-    void SetKeyBuf(uint8_t* key, size_t len) { setptr(&_key, key, len); }
-    void SetKeyLen(size_t len) { _keyLen = len; }
-    void SetCertBuf(uint8_t* cert, size_t len) { setptr(&_cert, cert, len); }
-    void SetCertLen(size_t len) { _certLen = len; }
-    bool ImportKey(uint8_t* in, size_t inLen, uint8_t* pswd, size_t pswdLen);
-    bool ImportCert(uint8_t* in);
-    bool Import(uint8_t* in, size_t len);
-    void Export(uint8_t* buf, size_t* len);
-    void ExportCert(uint8_t* buf, size_t* len);
+    EXPORT void PutIssuer(const char* val);
+    EXPORT void PutSerNo(uint8_t* val);
+    EXPORT void PutSubject(const char* val);
+    EXPORT void PutNotBefore(uint8_t* val);
+    EXPORT void PutNotAfter(uint8_t* val);
+    EXPORT void PutPubKey(RSA& pubkey);
+    EXPORT void PutPrvKey(RSA& prvkey);
+    EXPORT void SetKeyBuf(uint8_t* key, size_t len) { setptr(&_key, key, len); }
+    EXPORT void SetKeyLen(size_t len) { _keyLen = len; }
+    EXPORT void SetCertBuf(uint8_t* cert, size_t len) { setptr(&_cert, cert, len); }
+    EXPORT void SetCertLen(size_t len) { _certLen = len; }
+    EXPORT bool ImportKey(uint8_t* in, size_t inLen, uint8_t* pswd, size_t pswdLen);
+    EXPORT bool ImportCert(uint8_t* in);
+    EXPORT bool Import(uint8_t* in, size_t len);
+    EXPORT void Export(uint8_t* buf, size_t* len);
+    EXPORT void ExportCert(uint8_t* buf, size_t* len);
 };

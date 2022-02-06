@@ -29,14 +29,21 @@ enum {
 };
 
 #if defined(_WIN32)
+#if defined(_WINDLL)
+#define EXPORT __declspec(dllexport)
+#else
+#define EXPORT __declspec(dllimport)
+#endif
 #define S_IRUSR _S_IREAD
 #define S_ISDIR(x) ((x) & (_S_IFDIR))
 #define S_ISREG(x) ((x) & (_S_IFREG))
 #define WINSOCKVERSION 0x0202
 #else
 #if defined(__linux__) || defined (__APPLE__)
+#define EXPORT __attribute__((visibility("default")))
 #define closesocket(x) ::close(x)
 #else
+#define __EXPORT
 #define SOMAXCONN 5
 #endif
 #define __cdecl
@@ -81,21 +88,21 @@ typedef struct systemtime {
 #if !defined(_WIN32)
 void GetSystemTime(SYSTEMTIME* st);
 #endif
-void catmem(uint8_t** d, uint8_t* s, size_t len);
+EXPORT void catmem(uint8_t** d, uint8_t* s, size_t len);
 void catstr(uint8_t** d, const char* s, size_t* len);
-void catstr(char** d, const char* s, size_t* len);
+EXPORT void catstr(char** d, const char* s, size_t* len);
 int cmpstr(const char* d, char* s);
 bool datetimecheck(uint8_t* s, struct tm* tmOut);
 void datetimeclock(uint8_t* buf);
 uint8_t* derfix(uint8_t* p, uint8_t* s);
 char* dupstr(const char* s);
-void freeptr(uint8_t** ptr);
+EXPORT void freeptr(uint8_t** ptr);
 void freestr(char** s);
 char* ltrim(char* s);
 char* rtrim(char* s);
-void setptr(uint8_t** ptr, uint8_t* s, size_t len);
+EXPORT void setptr(uint8_t** ptr, uint8_t* s, size_t len);
 void setstr(char** ptr, const char* s);
 void setunstr(char** d, char* s);
 char* tokstrq(char* s, const char* d, const char* x, char** p);
-char* tokstrx(char* s, const char* d, const char* x, char** p);
+EXPORT char* tokstrx(char* s, const char* d, const char* x, char** p);
 char* unstr(char* d, char* s);

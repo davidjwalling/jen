@@ -39,105 +39,105 @@ public:
     size_t _loword;
     size_t _hiword;
 
-    Num();
-    Num(uint32_t val);
-    ~Num();
-    void Init();
+    EXPORT Num();
+    EXPORT Num(uint32_t val);
+    EXPORT ~Num();
+    EXPORT void Init();
     void Reset();
 
     size_t loWord();
     size_t hiWord();
-    size_t bits();
-    size_t bytes();
-    size_t words();
+    EXPORT size_t bits();
+    EXPORT size_t bytes();
+    EXPORT  size_t words();
 
-    bool bit(size_t bit);
-    uint8_t byte(size_t byte);
-    uint32_t word(size_t word);
+    EXPORT bool bit(size_t bit);
+    EXPORT uint8_t byte(size_t byte);
+    EXPORT uint32_t word(size_t word);
 
-    void resetBit(size_t bit);
-    void resetByte(size_t byte);
-    void resetWord(size_t word);
+    EXPORT void resetBit(size_t bit);
+    EXPORT void resetByte(size_t byte);
+    EXPORT void resetWord(size_t word);
 
-    void setBit(size_t bit);
-    void setByte(size_t n, uint8_t val);
-    void setWord(size_t n, uint32_t val);
+    EXPORT void setBit(size_t bit);
+    EXPORT void setByte(size_t n, uint8_t val);
+    EXPORT void setWord(size_t n, uint32_t val);
 
-    uint8_t* bin(uint8_t* buf, size_t len);
+    EXPORT uint8_t* bin(uint8_t* buf, size_t len);
 
-    void putZero();
-    void putOne();
-    void putTwo();
+    EXPORT void putZero();
+    EXPORT void putOne();
+    EXPORT void putTwo();
 
-    void putRandom(Random& rand, size_t bits);
-    void putWord(uint32_t val);
-    void putLong(int32_t val);
-    void putBin(uint8_t* val, size_t len);
-    void putHex(uint8_t* str, size_t len);
+    EXPORT void putRandom(Random& rand, size_t bits);
+    EXPORT void putWord(uint32_t val);
+    EXPORT void putLong(int32_t val);
+    EXPORT void putBin(uint8_t* val, size_t len);
+    EXPORT void putHex(uint8_t* str, size_t len);
 
-    void copy(Num& Y);
-    int compareAbs(Num& Y);
-    int compare(Num& Y);
+    EXPORT void copy(Num& Y);
+    EXPORT int compareAbs(Num& Y);
+    EXPORT int compare(Num& Y);
 
-    void neg();
-    void mul2();
-    void div2();
-    void shiftLeft(size_t bits);
-    void shiftRight(size_t bits);
+    EXPORT void neg();
+    EXPORT void mul2();
+    EXPORT void div2();
+    EXPORT void shiftLeft(size_t bits);
+    EXPORT void shiftRight(size_t bits);
 
-    void incrementAbs();
-    void decrementAbs();
-    void addAbs(Num& Y);
-    void subAbs(Num& Y);
-    void mulAbs(Num& Y);
-    int divAbs(Num& Y);
-    void modAbs(Num& Y);
+    EXPORT void incrementAbs();
+    EXPORT void decrementAbs();
+    EXPORT void addAbs(Num& Y);
+    EXPORT void subAbs(Num& Y);
+    EXPORT void mulAbs(Num& Y);
+    EXPORT int divAbs(Num& Y);
+    EXPORT void modAbs(Num& Y);
 
-    void mul10();
-    void putDecimal(uint8_t* str, size_t len);
-    void putOctal(uint8_t* str, size_t len);
-    void putString(uint8_t* str);
+    EXPORT void mul10();
+    EXPORT void putDecimal(uint8_t* str, size_t len);
+    EXPORT void putOctal(uint8_t* str, size_t len);
+    EXPORT void putString(uint8_t* str);
 
-    void increment();
-    void decrement();
-    void add(Num& Y);
-    void sub(Num& Y);
-    void mul(Num& Y);
-    void div(Num& Y);
-    void mod(Num& Y);
+    EXPORT void increment();
+    EXPORT void decrement();
+    EXPORT void add(Num& Y);
+    EXPORT void sub(Num& Y);
+    EXPORT void mul(Num& Y);
+    EXPORT void div(Num& Y);
+    EXPORT void mod(Num& Y);
 
-    void montMul(Num& A, Num& B, Num& N, uint32_t ni);
-    static uint32_t mulInvWord(uint32_t n);
-    void montExp(Num& A, Num& E, Num& M);
-    bool isMRPrime(size_t rounds);
-    uint32_t modWord(uint32_t val);
-    bool isPrime();
-    bool putPrime(Random& rand, size_t bits);
-    void GCD(Num& X, Num& Y);
-    void mulInvGCD(Num& X, Num& Y, Num& D);
-    uint8_t* BER(uint8_t* buf);
+    EXPORT void montMul(Num& A, Num& B, Num& N, uint32_t ni);
+    EXPORT static uint32_t mulInvWord(uint32_t n);
+    EXPORT void montExp(Num& A, Num& E, Num& M);
+    EXPORT bool isMRPrime(size_t rounds);
+    EXPORT uint32_t modWord(uint32_t val);
+    EXPORT bool isPrime();
+    EXPORT bool putPrime(Random& rand, size_t bits);
+    EXPORT void GCD(Num& X, Num& Y);
+    EXPORT void mulInvGCD(Num& X, Num& Y, Num& D);
+    EXPORT uint8_t* BER(uint8_t* buf);
 
-    Num& operator = (const long val);
-    Num& operator = (Num& val);
+    EXPORT Num& operator = (const long val);
+    EXPORT Num& operator = (Num& val);
 
-    bool operator > (long val);
-    bool operator > (Num& val);
-    bool operator >= (Num& val);
+    EXPORT bool operator > (long val);
+    EXPORT bool operator > (Num& val);
+    EXPORT bool operator >= (Num& val);
 
-    const int operator == (uint32_t val);
-    const int operator == (Num& val);
-    const int operator != (uint32_t val);
-    const int operator != (Num& val);
+    EXPORT const int operator == (uint32_t val);
+    EXPORT const int operator == (Num& val);
+    EXPORT const int operator != (uint32_t val);
+    EXPORT const int operator != (Num& val);
 
-    const void operator <<= (size_t bits);
-    const void operator >>= (size_t bits);
-    const void operator ++ ();
-    const void operator -- ();
-    const void operator += (uint32_t val);
-    const void operator += (Num& val);
-    const void operator -= (uint32_t val);
-    const void operator -= (Num& val);
-    const void operator *= (Num& val);
-    const void operator /= (Num& val);
-    const void operator %= (Num& val);
+    EXPORT const void operator <<= (size_t bits);
+    EXPORT const void operator >>= (size_t bits);
+    EXPORT const void operator ++ ();
+    EXPORT const void operator -- ();
+    EXPORT const void operator += (uint32_t val);
+    EXPORT const void operator += (Num& val);
+    EXPORT const void operator -= (uint32_t val);
+    EXPORT const void operator -= (Num& val);
+    EXPORT const void operator *= (Num& val);
+    EXPORT const void operator /= (Num& val);
+    EXPORT const void operator %= (Num& val);
 };

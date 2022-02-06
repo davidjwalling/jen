@@ -86,61 +86,61 @@ public:
     void LRound();
     void KeySchedule(uint8_t* raw, uint32_t* sub);
 
-    virtual void SetKey(uint8_t* val) override;
-    virtual size_t GetBlockBytes() override;
-    virtual void Encipher();
-    virtual void Encrypt(uint8_t* plain, uint8_t* cipher) override;
-    virtual void Decrypt(uint8_t* cipher, uint8_t* plain) override;
-    virtual uint8_t* PutOID(uint8_t* buf) override;
+    EXPORT virtual void SetKey(uint8_t* val) override;
+    EXPORT virtual size_t GetBlockBytes() override;
+    EXPORT virtual void Encipher();
+    EXPORT virtual void Encrypt(uint8_t* plain, uint8_t* cipher) override;
+    EXPORT virtual void Decrypt(uint8_t* cipher, uint8_t* plain) override;
+    EXPORT virtual uint8_t* PutOID(uint8_t* buf) override;
 };
 
 class DESCBC : public DES {
 public:
-    void Encrypt(uint8_t* plain, uint8_t* cipher) override;
-    void Decrypt(uint8_t* cipher, uint8_t* plain) override;
-    uint8_t* PutOID(uint8_t* buf) override;
+    EXPORT void Encrypt(uint8_t* plain, uint8_t* cipher) override;
+    EXPORT void Decrypt(uint8_t* cipher, uint8_t* plain) override;
+    EXPORT uint8_t* PutOID(uint8_t* buf) override;
 };
 
 class DESCFB : public DES {
 public:
-    void Encrypt(uint8_t* plain, uint8_t* cipher) override;
-    void Decrypt(uint8_t* cipher, uint8_t* plain) override;
-    uint8_t* PutOID(uint8_t* buf) override;
+    EXPORT void Encrypt(uint8_t* plain, uint8_t* cipher) override;
+    EXPORT void Decrypt(uint8_t* cipher, uint8_t* plain) override;
+    EXPORT uint8_t* PutOID(uint8_t* buf) override;
 };
 
 class DESOFB : public DES {
 public:
-    void Encrypt(uint8_t* plain, uint8_t* cipher) override;
-    void Decrypt(uint8_t* cipher, uint8_t* plain) override;
-    uint8_t* PutOID(uint8_t* buf) override;
+    EXPORT void Encrypt(uint8_t* plain, uint8_t* cipher) override;
+    EXPORT void Decrypt(uint8_t* cipher, uint8_t* plain) override;
+    EXPORT uint8_t* PutOID(uint8_t* buf) override;
 };
 
 class DES3 : public DES {
 public:
     void Set2Keys(uint8_t* key1, uint8_t* key2);
     void Set3Keys(uint8_t* key1, uint8_t* key2, uint8_t* key3);
-    void SetKey(uint8_t* key) override;
-    void Encipher() override;
-    uint8_t* PutOID(uint8_t* buf) override;
+    EXPORT void SetKey(uint8_t* key) override;
+    EXPORT void Encipher() override;
+    EXPORT uint8_t* PutOID(uint8_t* buf) override;
 };
 
 class DES3CBC : public DES3 {
 public:
-    void Encrypt(uint8_t* plain, uint8_t* cipher) override;
-    void Decrypt(uint8_t* cipher, uint8_t* plain) override;
-    uint8_t* PutOID(uint8_t* buf) override;
+    EXPORT void Encrypt(uint8_t* plain, uint8_t* cipher) override;
+    EXPORT void Decrypt(uint8_t* cipher, uint8_t* plain) override;
+    EXPORT uint8_t* PutOID(uint8_t* buf) override;
 };
 
 class DES3CFB : public DES3 {
 public:
-    void Encrypt(uint8_t* plain, uint8_t* cipher) override;
-    void Decrypt(uint8_t* cipher, uint8_t* plain) override;
-    uint8_t* PutOID(uint8_t* buf) override;
+    EXPORT void Encrypt(uint8_t* plain, uint8_t* cipher) override;
+    EXPORT void Decrypt(uint8_t* cipher, uint8_t* plain) override;
+    EXPORT uint8_t* PutOID(uint8_t* buf) override;
 };
 
 class DES3OFB : public DES3 {
 public:
-    void Encrypt(uint8_t* plain, uint8_t* cipher) override;
-    void Decrypt(uint8_t* cipher, uint8_t* plain) override;
-    uint8_t* PutOID(uint8_t* buf) override;
+    EXPORT void Encrypt(uint8_t* plain, uint8_t* cipher) override;
+    EXPORT void Decrypt(uint8_t* cipher, uint8_t* plain) override;
+    EXPORT uint8_t* PutOID(uint8_t* buf) override;
 };

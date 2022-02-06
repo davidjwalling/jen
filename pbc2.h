@@ -20,11 +20,11 @@ public:
     uint8_t* _iv;
     PRNG _prng;
 
-    PBC2();
-    ~PBC2();
+    EXPORT  PBC2();
+    EXPORT ~PBC2();
     void Init();
     void Reset();
-    void DeriveKey(uint8_t* key, size_t keyLen);
+    EXPORT void DeriveKey(uint8_t* key, size_t keyLen);
     void Transform(uint8_t* out, size_t round);
     void Encrypt(uint8_t* out, uint8_t* in, size_t* len);
     void Decrypt(uint8_t* out, uint8_t* in, size_t* len);
@@ -32,8 +32,8 @@ public:
     size_t GetCount();
     uint8_t* GetIV(uint8_t* out);
     uint8_t* GetSalt(uint8_t* out);
-    void SetCount(size_t count);
+    EXPORT void SetCount(size_t count);
     void SetIV(uint8_t* iv);
-    void SetPassword(uint8_t* password, size_t len);
-    void SetSalt(uint8_t* salt, size_t len);
+    EXPORT void SetPassword(uint8_t* password, size_t len);
+    EXPORT void SetSalt(uint8_t* salt, size_t len);
 };

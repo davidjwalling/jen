@@ -7,22 +7,28 @@ CC	= g++ -std=gnu++11
 endif
 APPCC	= ${CC} -g -c
 APPLNK	= ${CC}
+LIBCC	= ${APPCC} -fPIC
+LIBLNK	= ${CC} -shared
 
-all: jen jentest
+all: libjen jen jentest
 
 clean:
-	rm -f jen jentest *.o test.*
+	rm -f libjet.so jen jentest *.o test.*
 
 install:
+	cp libjen.so /usr/local/lib
 	cp jen /usr/local/bin
 	cp jentest /usr/local/bin
 
 .PHONY:
 	clean
 
-OBJS = aes.o api.o asn.o base64.o buffer.o channel.o cipher.o compress.o crc32.o deflate.o des.o digest.o file.o hmac.o inflate.o log.o md5.o num.o passphrase.o pbc2.o prng.o random.o rsa.o sha.o socket.o uri.o x509.o
-JENOBJS = app.o ${OBJS}
+LIBJENOBJS = aes.o api.o asn.o base64.o cipher.o compress.o crc32.o deflate.o des.o digest.o file.o hmac.o inflate.o log.o md5.o num.o passphrase.o pbc2.o prng.o random.o rsa.o sha.o socket.o uri.o x509.o
+JENOBJS = app.o buffer.o channel.o ${OBJS}
 JENTESTOBJS = jentest.o ${OBJS}
+
+libjen: ${LIBJENOBJS}
+	${LIBLNK} ${LIBJENOBJS} ${SYSLIBS} -o $@.so
 
 jen: ${JENOBJS}
 	${APPLNK} ${JENOBJS} ${SYSLIBS} -o $@
@@ -31,19 +37,19 @@ jentest: ${JENTESTOBJS}
 	${APPLNK} ${JENTESTOBJS} ${SYSLIBS} -o $@
 
 aes.o: aes.cpp
-	${APPCC} aes.cpp
+	${LIBCC} aes.cpp
 
 api.o: api.cpp
-	${APPCC} api.cpp
+	${LIBCC} api.cpp
 
 app.o: app.cpp
 	${APPCC} app.cpp
 
 asn.o: asn.cpp
-	${APPCC} asn.cpp
+	${LIBCC} asn.cpp
 
 base64.o: base64.cpp
-	${APPCC} base64.cpp
+	${LIBCC} base64.cpp
 
 buffer.o: buffer.cpp
 	${APPCC} buffer.cpp
@@ -52,70 +58,70 @@ channel.o: channel.cpp
 	${APPCC} channel.cpp
 
 cipher.o: cipher.cpp
-	${APPCC} cipher.cpp
+	${LIBCC} cipher.cpp
 
 compress.o: compress.cpp
-	${APPCC} compress.cpp
+	${LIBCC} compress.cpp
 
 crc32.o: crc32.cpp
-	${APPCC} crc32.cpp
+	${LIBCC} crc32.cpp
 
 deflate.o: deflate.cpp
-	${APPCC} -Wno-deprecated-register deflate.cpp
+	${LIBCC} -Wno-deprecated-register deflate.cpp
 
 des.o: des.cpp
-	${APPCC} des.cpp
+	${LIBCC} des.cpp
 
 digest.o: digest.cpp
-	${APPCC} digest.cpp
+	${LIBCC} digest.cpp
 
 file.o: file.cpp
-	${APPCC} file.cpp
+	${LIBCC} file.cpp
 
 hmac.o: hmac.cpp
-	${APPCC} hmac.cpp
+	${LIBCC} hmac.cpp
 
 inflate.o: inflate.cpp
-	${APPCC} -Wno-deprecated-register inflate.cpp
+	${LIBCC} -Wno-deprecated-register inflate.cpp
 
 jentest.o: jentest.cpp
 	${APPCC} jentest.cpp
 
 log.o: log.cpp
-	${APPCC} log.cpp
+	${LIBCC} log.cpp
 
 md5.o: md5.cpp
-	${APPCC} md5.cpp
+	${LIBCC} md5.cpp
 
 num.o: num.cpp
-	${APPCC} num.cpp
+	${LIBCC} num.cpp
 
 passphrase.o: passphrase.cpp
-	${APPCC} passphrase.cpp
+	${LIBCC} passphrase.cpp
 
 pbc2.o: pbc2.cpp
-	${APPCC} pbc2.cpp
+	${LIBCC} pbc2.cpp
 
 prng.o: prng.cpp
-	${APPCC} prng.cpp
+	${LIBCC} prng.cpp
 
 random.o: random.cpp	
-	${APPCC} random.cpp
+	${LIBCC} random.cpp
 
 rsa.o: rsa.cpp
-	${APPCC} rsa.cpp
+	${LIBCC} rsa.cpp
 
 sha.o: sha.cpp
-	${APPCC} sha.cpp
+	${LIBCC} sha.cpp
 
 socket.o: socket.cpp
-	${APPCC} socket.cpp
+	${LIBCC} socket.cpp
 
 uri.o: uri.cpp
-	${APPCC} uri.cpp
+	${LIBCC} uri.cpp
 
 x509.o: x509.cpp
-	${APPCC} x509.cpp
+	${LIBCC} x509.cpp
 
 aes.cpp: aes.h asn.h oid.h
 	touch aes.cpp

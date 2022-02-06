@@ -13,7 +13,7 @@ public:
     void Reset();
 };
 
-int appErr();
-int osErr();
-void appErr(int err);
-void osErr(int err);
+EXPORT int appErr();
+EXPORT int osErr();
+EXPORT void appErr(int err);
+EXPORT void osErr(int err);

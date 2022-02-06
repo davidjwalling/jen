@@ -59,8 +59,8 @@ class MD5 : public Digest {
 public:
     HASH32 _hash;
 
-    MD5();
-    ~MD5() override;
+    EXPORT MD5();
+    EXPORT ~MD5() override;
     void Begin() override;
     void Transform() override;
     void End() override;

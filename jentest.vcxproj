@@ -72,7 +72,7 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libjen.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -88,7 +88,7 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libjen.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -96,67 +96,20 @@
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libjen.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="aes.h" />
-    <ClInclude Include="api.h" />
-    <ClInclude Include="app.h" />
-    <ClInclude Include="asn.h" />
     <ClInclude Include="jentest.h" />
-    <ClInclude Include="base64.h" />
-    <ClInclude Include="buffer.h" />
-    <ClInclude Include="channel.h" />
-    <ClInclude Include="cipher.h" />
-    <ClInclude Include="compress.h" />
-    <ClInclude Include="crc32.h" />
-    <ClInclude Include="deflate.h" />
-    <ClInclude Include="des.h" />
-    <ClInclude Include="digest.h" />
-    <ClInclude Include="file.h" />
-    <ClInclude Include="hmac.h" />
-    <ClInclude Include="inflate.h" />
-    <ClInclude Include="log.h" />
-    <ClInclude Include="md5.h" />
-    <ClInclude Include="num.h" />
-    <ClInclude Include="oid.h" />
-    <ClInclude Include="passphrase.h" />
-    <ClInclude Include="pbc2.h" />
-    <ClInclude Include="prng.h" />
-    <ClInclude Include="random.h" />
-    <ClInclude Include="rsa.h" />
-    <ClInclude Include="sha.h" />
-    <ClInclude Include="socket.h" />
-    <ClInclude Include="uri.h" />
-    <ClInclude Include="x509.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="aes.cpp" />
-    <ClCompile Include="api.cpp" />
-    <ClCompile Include="asn.cpp" />
     <ClCompile Include="jentest.cpp" />
-    <ClCompile Include="base64.cpp" />
-    <ClCompile Include="cipher.cpp" />
-    <ClCompile Include="compress.cpp" />
-    <ClCompile Include="crc32.cpp" />
-    <ClCompile Include="deflate.cpp" />
-    <ClCompile Include="des.cpp" />
-    <ClCompile Include="digest.cpp" />
-    <ClCompile Include="file.cpp" />
-    <ClCompile Include="hmac.cpp" />
-    <ClCompile Include="inflate.cpp" />
-    <ClCompile Include="log.cpp" />
-    <ClCompile Include="md5.cpp" />
-    <ClCompile Include="num.cpp" />
-    <ClCompile Include="passphrase.cpp" />
-    <ClCompile Include="pbc2.cpp" />
-    <ClCompile Include="prng.cpp" />
-    <ClCompile Include="random.cpp" />
-    <ClCompile Include="rsa.cpp" />
-    <ClCompile Include="sha.cpp" />
-    <ClCompile Include="socket.cpp" />
-    <ClCompile Include="x509.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="libjen.vcxproj">
+      <Project>{ecf370f3-23c5-4df4-9b36-1d393637c563}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

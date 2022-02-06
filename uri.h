@@ -34,9 +34,9 @@ public:
     char *_user;
     char *_password;
 
-    URI();
-    ~URI();
+    EXPORT URI();
+    EXPORT ~URI();
     void Init();
-    void Reset();
-    bool Put(char *uri_s);
+    EXPORT void Reset();
+    EXPORT bool Put(char *uri_s);
 };

@@ -29,14 +29,14 @@ public:
     Digest* _digest;
     uint8_t _k[hmac::maxblockbytes];
 
-    HMAC();
-    ~HMAC();
+    EXPORT HMAC();
+    EXPORT ~HMAC();
     void Init();
     void Reset();
-    bool SetDigestAlg(size_t algId);
-    void SetKey(uint8_t* key, size_t len);
-    void Begin();
-    void Update(uint8_t* in, size_t len);
-    void End();
-    void GetMAC(uint8_t* out, size_t len);
+    EXPORT bool SetDigestAlg(size_t algId);
+    EXPORT void SetKey(uint8_t* key, size_t len);
+    EXPORT void Begin();
+    EXPORT void Update(uint8_t* in, size_t len);
+    EXPORT void End();
+    EXPORT void GetMAC(uint8_t* out, size_t len);
 };

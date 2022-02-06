@@ -16,8 +16,8 @@ public:
     Random _random;
     DES3 _des3;
 
-    PRNG();
-    ~PRNG();
+    EXPORT PRNG();
+    EXPORT ~PRNG();
     void Init();
     void Reset();
     void GetRandomBytes(uint8_t* out, size_t len);
