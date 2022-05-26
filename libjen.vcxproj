@@ -125,6 +125,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="aes.cpp" />
     <ClCompile Include="api.cpp" />
     <ClCompile Include="asn.cpp" />
     <ClCompile Include="base64.cpp" />

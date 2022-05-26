@@ -14,9 +14,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="aes.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="jentest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

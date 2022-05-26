@@ -103,7 +103,6 @@
     <ClInclude Include="jentest.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="aes.cpp" />
     <ClCompile Include="jentest.cpp" />
   </ItemGroup>
   <ItemGroup>

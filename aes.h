@@ -80,42 +80,42 @@ public:
 
 class AES128ECB : public AESECB {
 public:
-    AES128ECB();
-    ~AES128ECB();
+    EXPORT AES128ECB();
+    EXPORT ~AES128ECB();
     uint8_t* PutOID(uint8_t* buf) override;
 };
 
 class AES128CBC : public AESCBC {
 public:
-    AES128CBC();
-    ~AES128CBC();
+    EXPORT AES128CBC();
+    EXPORT ~AES128CBC();
     uint8_t* PutOID(uint8_t* buf) override;
 };
 
 class AES192ECB : public AESECB {
 public:
-    AES192ECB();
-    ~AES192ECB();
+    EXPORT AES192ECB();
+    EXPORT ~AES192ECB();
     uint8_t* PutOID(uint8_t* buf) override;
 };
 
 class AES192CBC : public AESCBC {
 public:
-    AES192CBC();
-    ~AES192CBC();
+    EXPORT AES192CBC();
+    EXPORT ~AES192CBC();
     uint8_t* PutOID(uint8_t* buf) override;
 };
 
 class AES256ECB : public AESECB {
 public:
-    AES256ECB();
-    ~AES256ECB();
+    EXPORT AES256ECB();
+    EXPORT ~AES256ECB();
     uint8_t* PutOID(uint8_t* buf) override;
 };
 
 class AES256CBC : public AESCBC {
 public:
-    AES256CBC();
-    ~AES256CBC();
+    EXPORT AES256CBC();
+    EXPORT ~AES256CBC();
     uint8_t* PutOID(uint8_t* buf) override;
 };

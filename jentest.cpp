@@ -2396,9 +2396,7 @@ void runTests()
 
 int usage()
 {
-    printf( \
-        "Usage: jentest test [all] [dump]\n" \
-        "       jentest gen  [license]\n");
+    printf("Usage: jentest test [all] [dump]\n");
     return 0;
 }
 
