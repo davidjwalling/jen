@@ -1,5 +1,6 @@
 *.o
 *.exe
+*.so
 *.vcxproj.user
 .vs/*
 .vscode/*

@@ -24,8 +24,8 @@ install:
 	clean
 
 LIBJENOBJS = aes.o api.o asn.o base64.o cipher.o compress.o crc32.o deflate.o des.o digest.o file.o hmac.o inflate.o log.o md5.o num.o passphrase.o pbc2.o prng.o random.o rsa.o sha.o socket.o uri.o x509.o
-JENOBJS = app.o buffer.o channel.o ${OBJS}
-JENTESTOBJS = jentest.o ${OBJS}
+JENOBJS = app.o buffer.o channel.o ${LIBJENOBJS}
+JENTESTOBJS = jentest.o ${LIBJENOBJS}
 
 libjen: ${LIBJENOBJS}
 	${LIBLNK} ${LIBJENOBJS} ${SYSLIBS} -o $@.so
